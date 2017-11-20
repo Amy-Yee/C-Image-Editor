@@ -2,6 +2,18 @@
 #include <assert.h>
 #include "Image.h"
 
+/* Return the image's width in pixels */
+unsigned int ImageWidth(const IMAGE *image) {
+  assert(image);
+  return(image -> W);
+}
+
+/* Return the image's height in pixels */
+unsigned int ImageHeight(const IMAGE *image) {
+  assert(image);
+  return(image -> H);
+}
+
 /* Get the R intensity of pixel (x, y) in image */
 unsigned char GetPixelR(const IMAGE *image, unsigned int x,  unsigned int y) {
   assert(image);
